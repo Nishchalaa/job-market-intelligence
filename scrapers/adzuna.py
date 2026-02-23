@@ -2,8 +2,9 @@ import requests
 import pandas as pd
 from datetime import datetime
 
-APP_ID = "your_app_id"
-APP_KEY = "your_app_key"
+import os
+APP_ID = os.getenv("ADZUNA_APP_ID")
+APP_KEY = os.getenv("ADZUNA_APP_KEY")
 
 def scrape_adzuna():
     searches = ["data engineer", "data analyst", "software engineer", "python developer"]
